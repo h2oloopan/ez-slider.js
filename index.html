@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title></title>
+        <script type="text/javascript" src="jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="jquery.ez-slider.js"></script>
+        <link rel="stylesheet" type="text/css" href="slider.css" />
+    </head>
+    <body>
+        <div id="main">
+            <div id="content">
+                <div id="slider"></div>
+            </div>
+            <div>
+                Now that we have our shell we can start writing our actual plugin code. 
+                But before we do that, I'd like to say a word about context. 
+                In the immediate scope of the plugin function, the this keyword refers to the jQuery object the plugin was invoked on. 
+                This is a common slip up due to the fact that in other instances where jQuery accepts a callback, 
+                the this keyword refers to the native DOM element. 
+                This often leads to developers unnecessarily wrapping the this keyword (again) in the jQuery function.
+            </div>
+        </div>
+        <script type="text/javascript">
+            $("#slider").slider({
+                content: [
+                    {
+                        title: 'Cloud Computing',
+                        description: 'Cloud computing is the use of computing resources (hardware and software) that are delivered as a service over a network (typically the Internet).',
+                        url: 'http://www.teebie.com/sitemap',
+                        image: 'images/cloudcomputing.png',
+                        icon: 'images/c-icon.png'
+                    },
+                    {
+                        title: 'Big Data',
+                        description: 'In information technology, big data is a collection of data sets so large and complex that it becomes difficult to process using on-hand database management tools.',
+                        url: 'http://www.teebie.com/sitemap',
+                        image: 'images/bigdata.png',
+                        icon: 'images/b-icon.png'
+                    },
+                    {
+                        title: 'Mobile Technology',
+                        description: 'The next generation of smartphones are going to be context-aware, taking advantage of the growing availability of embedded physical sensors and data exchange abilities.',
+                        url: 'http://www.teebie.com/sitemap',
+                        image: 'images/mobiletechnology.png',
+                        icon: 'images/m-icon.png'
+                    }
+                ]
+            });
+        </script>
+    </body>
+</html>
