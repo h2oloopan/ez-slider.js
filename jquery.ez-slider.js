@@ -9,7 +9,7 @@
         var height = $(this).height();
 
         var mouseOn = false;
-        var sliderTimer, checkerTimer, switching;
+        var sliderTimer, checkerTimer;
 
         var checkBeforeRun = function (func) {
             if (mouseOn) {
